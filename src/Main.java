@@ -28,7 +28,7 @@ public class Main {
         System.out.println("Сотрудник с максимальной ЗП: " + maxSalary());
         printName();
 
-        System.out.println("-----------Уровень 1-----------");
+        System.out.println("-----------Уровень 2-----------");
         indexSalary(1.05F);
         printAll();
         int department = 2;
