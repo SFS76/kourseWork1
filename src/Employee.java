@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Employee {
     private static int idGen = 1;
     private final int id;
@@ -44,6 +46,18 @@ public class Employee {
                 ", department=" + department +
                 ", salary=" + salary +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Employee employee)) return false;
+        return id == employee.id && Objects.equals(name, employee.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name);
     }
 }
 
