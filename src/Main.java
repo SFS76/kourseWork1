@@ -152,21 +152,21 @@ public class Main {
         }
     }
     private static void printMinSalary (float salary) {
-        String employeeMinSalary = null;
+        Employee employeeMinSalary = null;
         for (Employee employee : EMPLOYEES) {
             if (employee.getSalary() < salary) {
-                employeeMinSalary = "EmployeeMinSalary{" + "id=" + employee.getId() + ", name='" + employee.getName() + ", salary=" + employee.getSalary() + '}';
+                employeeMinSalary = employee;
             }
         }
-        System.out.println(employeeMinSalary);
+        System.out.println("EmployeeMinSalary{" + "id=" + employeeMinSalary.getId() + ", name='" + employeeMinSalary.getName() + ", salary=" + employeeMinSalary.getSalary() + "}");
     }
     private static void printMaxSalary (float salary) {
-        String employeeMaxSalary = null;
+        Employee employeeMaxSalary = null;
         for (Employee employee : EMPLOYEES) {
             if (employee.getSalary() >= salary) {
-                employeeMaxSalary = "EmployeeMaxSalary{" + "id=" + employee.getId() + ", name='" + employee.getName() + ", salary=" + employee.getSalary() + '}';
+                employeeMaxSalary = employee;
             }
         }
-        System.out.println(employeeMaxSalary);
+        System.out.println("EmployeeMaxSalary{" + "id=" + employeeMaxSalary.getId() + ", name='" + employeeMaxSalary.getName() + ", salary=" + employeeMaxSalary.getSalary() + "}");
     }
 }
